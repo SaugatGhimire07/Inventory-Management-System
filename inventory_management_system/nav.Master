@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="nav.master.cs" Inherits="inventory_management_system.nav" %>
+
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Inventory Management System</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-growl/1.0.0/jquery.bootstrap-growl.min.js"></script>
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+  </head>
+  <body>	
+	<div class="wrapper d-flex align-items-stretch">
+		<nav id="sidebar">
+			<div class="p-4">
+			<h1><a href="Dashboard.aspx" class="logo">EazyStocks</a></h1>
+			<p class="welcome">Welcome, <asp:Label ID="userType" CssClass="userType mb-4" Text="" runat="server" />
+            </p>
+			<ul class="list-unstyled components mb-5">
+				<li class="active">
+				<a href="Dashboard.aspx"><span class="fa fa-home mr-3"></span> Dashboard</a>
+				</li>
+
+				<asp:Panel runat="server" ID="StaffVerification">
+                    <li>
+                        <a href="user_details.aspx"><span class="fa fa-address-book mr-3"></span> User Details</a>
+                    </li>
+                </asp:Panel>
+				<li>
+					<a href="Customer_details.aspx"><span class="fa fa-user-circle mr-3"></span> Customers</a>
+				</li>
+				<li>
+					<a href="Category.aspx"><span class="fa fa-folder-open mr-3"></span> Categories</a>
+				</li>
+				<li>
+					<a href="supplier_details.aspx"><span class="fa fa-cart-plus mr-3"></span> Suppliers</a>
+				</li>
+				<li>
+					<a href="items_details.aspx"><span class="fa fa-briefcase mr-3"></span> Items</a>
+				</li>
+				<li>
+					<a href="sales_details.aspx"><span class="fa fa-credit-card-alt mr-3"></span> Sales Details</a>
+				</li>
+
+				<li>
+					<a href="Purchase_history.aspx"><span class="fa fa-shopping-cart mr-3"></span> Purchase History</a>
+				</li>
+
+				<asp:Panel runat="server" ID="UserProfile" Visible="false">
+                    <li>
+                        <a href="profile.aspx"><span class="fa fa-address-book mr-3"></span> Profile</a>
+                    </li>
+                </asp:Panel>
+
+				<li>
+					<a href="loginpage.aspx"><span class="fa fa-sign-out mr-3"></span> Sign Out</a>
+				</li>
+				<li>
+			</ul>
+			<div class="footer">
+				<p>Copyright ©2021 All rights reserved | Inventory</p>
+			</div>
+
+			</div>
+		</nav>
+	<!-- Page Content  -->
+	<div id="content" class="p-4 p-md-5 pt-5">
+		<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+				</asp:ContentPlaceHolder>
+	</div>
+	</div>
+  </body>
+</html>
+
+
